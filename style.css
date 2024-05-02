@@ -30,6 +30,7 @@ button:active {
 }
 .buttons {
     display: flex;
+    object-fit: cover;
     width: 350px;
     height: 400px;
     position: fixed;
