@@ -10,15 +10,15 @@ button {
     background-color: black;
     color: white;
     border: none;
-    width: 70px;
-    height: 70px;
+    width: 200px;
+    height: 200px;
     background-color: #3c3c3c;
     border-radius: 50%;
-    font-size: 2rem;
+    font-size: 80px;
     margin: 5px;
 }
 button:active {
-    border: 2px solid white;
+    border: 10px solid white;
 }
 #equal,#cut,#allcut{
     background-color: white;
@@ -30,18 +30,16 @@ button:active {
 }
 .buttons {
     display: flex;
-    object-fit: cover;
-    width: 350px;
-    height: 400px;
     position: fixed;
+    bottom: 2%;
+    right: 0%;
+    object-fit: cover;
     justify-content: center;
     align-items: center;
-    bottom: 10px;
-    right: 0%;
 }
 #sum {
-    font-size: 60px;
+    font-size: 120px;
     position: fixed;
-    bottom: 450px;
+    bottom: 1150px;
     right: 10px;
 }
