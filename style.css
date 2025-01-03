@@ -76,15 +76,18 @@ button {
     margin: 5px;
     cursor: none;
     transition: transform 0.2s, background-color 0.2s;
-}
-#divid:hover,#plus:hover,#minus:hover,#multi:hover {
+
+&:active {
+    transform: scale(0.9);
+}}
+
+#divid:hover,
+#plus:hover,
+#minus:hover,
+#multi:hover {
     background: #fff;
     border-color: #000;
     color: #000;
-}
-
-button:active {
-    transform: scale(0.9);
 }
 
 /* Special buttons */
