@@ -1,45 +1,117 @@
+@font-face {
+  font-family: 'GamingFont';
+  src: url('font.ttf') format('truetype');
+}
+/* General Styling */
 body {
     background-color: black;
     color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
 }
+
+/* Reset padding and margin */
 * {
+    font-family: 'GamingFont', sans-serif;
+    /* text copy,select na ho website par */
+    /* For modern browsers */
+    user-select: none; 
+    /* For Safari */
+    -webkit-user-select: none; 
+    /* For Firefox */
+    -moz-user-select: none;
+    /* For Internet Explorer/Edge */
+    -ms-user-select: none; 
+    
     margin: 0;
     padding: 0;
+    color: #fff;
+    border-color: #fff;
+    text-decoration: none;
 }
-button {
-    background-color: black;
+
+/* Display area styling */
+#sum {
+    font-size: 30px;
+    background-color: #333;
     color: white;
-    border: none;
-    width: 200px;
-    height: 200px;
-    background-color: #3c3c3c;
-    border-radius: 50%;
-    font-size: 80px;
-    margin: 5px;
+    width: 90%;
+    height: 20vh;
+    text-align: right;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px 0;
+    letter-spacing: 2px;
 }
-button:active {
-    border: 10px solid white;
-}
-#equal,#cut,#allcut{
-    background-color: white;
-    color: black;
-}
-#equal:active,#cut:active,#allcut:active {
-    background-color: black;
-    color: white;
-}
+
+/* Buttons container */
 .buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    width: 100vw;
+    height: 75vh;
     display: flex;
-    position: fixed;
-    bottom: 2%;
-    right: 0%;
-    object-fit: cover;
     justify-content: center;
     align-items: center;
 }
-#sum {
-    font-size: 120px;
-    position: fixed;
-    bottom: 1150px;
-    right: 10px;
+
+/* Button styling */
+button {
+    background-color: #3c3c3c;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    cursor: none;
+    transition: transform 0.2s, background-color 0.2s;
+}
+#divid:hover,#plus:hover,#minus:hover,#multi:hover {
+    background: #fff;
+    border-color: #000;
+    color: #000;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+/* Special buttons */
+#equal,
+#cut,
+#allcut {
+    background-color: white;
+    color: black;
+}
+
+#equal:active,
+#cut:active,
+#allcut:active {
+    background-color: black;
+    color: white;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    #sum {
+        font-size: 36px;
+        height: 20vh;
+    }
+
+    button {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
 }
