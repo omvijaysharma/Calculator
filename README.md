@@ -12,9 +12,9 @@ A simple and functional calculator built with HTML, CSS, and JavaScript. It is d
 
 ## Demo
 
-Check out the live version of the Calculator here:
+Check out the live version of the Calculator by clicking the button below:
 
-[Live Demo](https://omvijaysharma.github.io/Calculator/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Calculator-brightgreen)](https://omvijaysharma.github.io/Calculator/)
 
 ## Installation
 
