@@ -1,21 +1,21 @@
 {
-  "name": "Calculator",
+  "name": "Calculator App",
   "short_name": "Calculator",
-  "description": "A simple calculator web app by vijay sharma",
+  "description": "A simple calculator web app",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#3c3c3c",
   "icons": [
     {
-      "src": "fint.ttf",
+      "src": "icon.png",
       "sizes": "192x192",
-      "type": "font/ttf"
+      "type": "image/png"
     },
     {
-      "src": "fint.ttf",
+      "src": "icon.png",
       "sizes": "512x512",
-      "type": "font/ttf"
+      "type": "image/png"
     }
   ]
 }
