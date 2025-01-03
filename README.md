@@ -1,20 +1,57 @@
-# 🌐 **Calculator**
+# Calculator Web App
 
-Welcome to the Calculator project, where you can perform basic arithmetic operations.
+A simple and functional calculator built with HTML, CSS, and JavaScript. It is designed as a Progressive Web App (PWA), so you can install it directly on your device for offline use!
 
-### 📲 **Try the Calculator**  
-[![Calculator Button](https://img.shields.io/static/v1?label=Try+Calculator&message=Click+Here&color=orange&style=for-the-badge)](https://omvijaysharma.github.io/Calculator/)
+## Features
 
----
+- Basic arithmetic operations (Addition, Subtraction, Multiplication, Division)
+- Percentage and Negative number toggle
+- Responsive design for both mobile and desktop
+- Installable as a Progressive Web App (PWA) for offline use
+- No ads, no tracking, just a clean and efficient calculator.
 
-### 📜 **About**  
-This project is a simple calculator that allows you to perform basic arithmetic calculations such as addition, subtraction, multiplication, and division. It’s built using HTML, CSS, and JavaScript for a smooth and interactive user experience.
+## Demo
 
-### 📂 **Key Features**  
-- **Basic Arithmetic Operations**: Perform addition, subtraction, multiplication, and division.  
-- **User-Friendly Interface**: Clean and simple design for easy use.  
-- **Responsive Layout**: Works well on both desktop and mobile devices.  
+Check out the live version of the Calculator here:
 
----
+[Live Demo](https://omvijaysharma.github.io/Calculator/)
 
-Thank you for exploring this project!
+## Installation
+
+### 1. **Web Browser**
+
+You can install the app directly from your browser for offline use. Follow these steps:
+
+#### For Chrome (Desktop and Mobile):
+
+1. Open the app in Chrome: [Calculator Web App](https://omvijaysharma.github.io/Calculator/).
+2. Tap the **Install** button (usually appears in the address bar) or open the browser menu (three dots in the top right) and select **Add to Home Screen**.
+3. Follow the prompts to install the app.
+
+#### For Firefox:
+
+1. Open the app in Firefox: [Calculator Web App](https://omvijaysharma.github.io/Calculator/).
+2. Tap the **Menu** button (three dots in the top right) and select **Add to Home Screen**.
+3. Confirm and install.
+
+#### For Safari (iOS):
+
+1. Open the app in Safari: [Calculator Web App](https://omvijaysharma.github.io/Calculator/).
+2. Tap the **Share** button at the bottom of the screen.
+3. Select **Add to Home Screen** from the options.
+4. Confirm and install.
+
+### 2. **Manual Installation (for Development)**
+
+If you would like to run the app locally or modify it, you can follow these steps:
+
+#### Prerequisites:
+
+- Git installed on your computer
+- A modern web browser
+
+#### Steps:
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/omvijaysharma/Calculator.git
