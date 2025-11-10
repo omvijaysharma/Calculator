@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>-</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="cartoon"></div>
+        <div class="anime"></div>
+        <div class="real"></div>
+    </div>
+    <div class="main">
+    <button id="showcontainerbtn" onclick="hide('.container','no'); hide('.main');">
+    show </button>
+    <button onclick="fullscreen()" id="fullscreenbtn">F11</button>
+    </div>
+    <div class="img-container">
+        <div class="img-container-1"></div>
+        <div class="img-container-2"></div>
+        <div class="img-container-3"></div>
+        <div class="img-container-4"></div>
+
+    </div>
+    <script src="js/script.js"></script>
+    <script src="svg.js"></script>
+    <script src="js/list.js"></script>
+    <script src="js/btn.js"></script>
+    <script>
+        if (typeof svgcode !== 'undefined') {
+            const encodedSvg = encodeURIComponent(svgcode)
+                .replace(/'/g, '%27')
+                .replace(/"/g, '%22');
+
+            document.body.style.backgroundImage = `url("data:image/svg+xml,${encodedSvg}")`;
+        } else {
+            console.error("Error: 'svgcode' variable is not found. Ensure svg.js is loaded and defines 'svgcode'.");
+        }
+    </script>
+
+</body>
+</html>
