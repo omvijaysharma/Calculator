@@ -73,6 +73,9 @@ function fullscreen() {
     }
 }
 
+function framevid(s) {
+    document.querySelector("#frame").src = applyCipher(s, num)
+}
 
 
 
