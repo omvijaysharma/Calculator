@@ -32,7 +32,7 @@ body {
     display: none;
     flex-direction: row;
     gap: 5vw;
-    width: 80vw;
+    width: 90vw;
     height: 100vh;
     justify-content: center;
     z-index: 10;
@@ -63,6 +63,7 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
     align-items: center;
     color: #fff;
+    text-shadow: 1px 1px 3px #000;
 }
 
 .app-button {
@@ -83,7 +84,27 @@ body {
     position: relative;
     overflow: hidden;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
+}
+.vid-button {
+    width: 220px; 
+    height: 130px;
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border: 1px solid #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
 }
 .app-button:hover {
     transform: scale(1.05);
@@ -159,11 +180,17 @@ body {
         flex-direction: column;
         height: auto;
         align-items: center;
-        margin-top: 50vh;
     }
     .anime, .cartoon, .real {
-        width: 80%;
-        height: 40vh;
+        width: 80vw;
+        height: 25vh;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .app-button {
+        width: 20vh;
+        height: 30vh;
     }
 .img-container div {
     width: 50vw;
