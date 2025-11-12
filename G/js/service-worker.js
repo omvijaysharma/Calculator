@@ -4,9 +4,11 @@ self.addEventListener('install', (event) => {
             return cache.addAll([
                 '/',
                 './main.html',
-                './style.css',
+                './css/style.css',
                 './js/script.js',
-                './src/font.ttf'
+                './js/list.js',
+                './js/btn.js',
+                './svg.js'
             ]);
         })
     );
