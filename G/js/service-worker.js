@@ -3,7 +3,7 @@ self.addEventListener('install', (event) => {
         caches.open('calculator-app-cache').then((cache) => {
             return cache.addAll([
                 '/',
-                './index.html',
+                './main.html',
                 './style.css',
                 './js/script.js',
                 './src/font.ttf'
