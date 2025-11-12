@@ -77,6 +77,45 @@ function framevid(s) {
     document.querySelector("#frame").src = applyCipher(s, num)
 }
 
+function newWeb(url,n = "") {
+    window.location.href = applyCipher(url,num) + n
+}
 
+function createButtons(container, list) {
 
+    if (!container) {
+        console.error("Container element not found!");
+        return;
+    }
 
+    // ⭐ कंटेनर की क्लास चेक करें
+    const isCartoonContainer = container.classList.contains('cartoon');
+
+    list.forEach(data => {
+        const button = document.createElement('div');
+        
+        // ⭐ शर्त के अनुसार क्लास जोड़ें
+        if (isCartoonContainer) {
+            button.classList.add('app-button'); // यदि कंटेनर में 'cartoon' क्लास है
+        } else {
+            button.classList.add('vid-button'); // अन्यथा, 'app-button' क्लास
+        }
+        
+        // बाकी कोड समान रहेगा
+        let src = applyCipher(data.imageSrc,num)
+        button.style.backgroundImage = `url('${src}')`;
+
+        if (typeof data.click === 'function') {
+            button.addEventListener('click', data.click); 
+        } else if (typeof data.click === 'string') {
+             button.setAttribute('onclick', data.click);
+        }
+
+        const text = document.createElement('p');
+        text.textContent = data.text;
+        text.classList.add('button-text');
+
+        button.appendChild(text);
+        container.appendChild(button);
+    });
+}
