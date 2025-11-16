@@ -1,4 +1,4 @@
-document.querySelector('#tag').textContent = "Happy Birthday" + applyCipher("UAtOxLA",num) 
+document.querySelector('#tag').textContent = "Happy Birthday"
 document.querySelector('#pare').textContent = "Story lgaa denaa iskaa"
 
 function applyCipher(text, num) { 
