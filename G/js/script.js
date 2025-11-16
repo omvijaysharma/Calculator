@@ -1,3 +1,6 @@
+document.querySelector('#tag').textContent = "Happy Birthday"
+document.querySelector('#pare').textContent = "Story lgaa denaa iskaa"
+
 function applyCipher(text, num) { 
     const characterList = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{};:'\",.<>/?`~";
     const listLength = characterList.length;
@@ -35,7 +38,7 @@ const num = getkey()
 
 function hide(ele, action = "") {
     let el = document.querySelector(ele);
-    if (!el) return; // safety check
+    if (!el) return;
     if (action === 'no') {
         el.style.display = 'flex';
     } else {
@@ -67,9 +70,9 @@ function addImagesToContainers(imageList) {
 
 function fullscreen() {
     if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen(); // Enter fullscreen
+    document.documentElement.requestFullscreen(); 
   } else {
-    document.exitFullscreen(); // Exit fullscreen
+    document.exitFullscreen();
     }
 }
 
@@ -82,31 +85,31 @@ function newWeb(url,n = "") {
 }
 
 function createButtons(container, list) {
-
     if (!container) {
         console.error("Container element not found!");
         return;
     }
 
-    // ⭐ कंटेनर की क्लास चेक करें
+    // List ko random order mein karo
+    const shuffledList = [...list].sort(() => Math.random() - 0.5);
+
     const isCartoonContainer = container.classList.contains('cartoon');
 
-    list.forEach(data => {
+    shuffledList.forEach(data => {
         const button = document.createElement('div');
-        
-        // ⭐ शर्त के अनुसार क्लास जोड़ें
+        let src
         if (isCartoonContainer) {
-            button.classList.add('app-button'); // यदि कंटेनर में 'cartoon' क्लास है
+            button.classList.add('app-button');
+            src = data.imageSrc
         } else {
-            button.classList.add('vid-button'); // अन्यथा, 'app-button' क्लास
+            button.classList.add('vid-button');
+            src = applyCipher(data.imageSrc,num)
         }
         
-        // बाकी कोड समान रहेगा
-        let src = applyCipher(data.imageSrc,num)
         button.style.backgroundImage = `url('${src}')`;
 
         if (typeof data.click === 'function') {
-            button.addEventListener('click', data.click); 
+            button.addEventListener('click', data.click);
         } else if (typeof data.click === 'string') {
              button.setAttribute('onclick', data.click);
         }
@@ -118,4 +121,59 @@ function createButtons(container, list) {
         button.appendChild(text);
         container.appendChild(button);
     });
+}
+
+function reloadOnShake() {
+    if (!('DeviceMotionEvent' in window)) {
+        console.log('Shaking not supported.');
+        return;
+    }
+
+    const THRESHOLD = 15;
+    let lastX = 0, lastY = 0, lastZ = 0;
+
+    window.addEventListener('devicemotion', (event) => {
+        const acc = event.accelerationIncludingGravity;
+
+        if (lastX === 0 && lastY === 0 && lastZ === 0) {
+            lastX = acc.x; lastY = acc.y; lastZ = acc.z;
+            return;
+        }
+
+        const delta = Math.abs(acc.x - lastX) + Math.abs(acc.y - lastY) + Math.abs(acc.z - lastZ);
+
+        if (delta > THRESHOLD) {
+            console.log('Shaked! Reloading...');
+            window.close(); 
+        }
+
+        lastX = acc.x; lastY = acc.y; lastZ = acc.z;
+    });
+}
+
+reloadOnShake();
+
+function closeTabOnLongPress() {
+    const body = document.body;
+    let pressTimer;
+
+    body.addEventListener('touchstart', (e) => {
+        pressTimer = setTimeout(() => {
+            console.log('Long press detected! Trying to close tab...'); 
+            window.location.reload(); 
+        }, 500); 
+    });
+
+    body.addEventListener('touchend', () => {
+        clearTimeout(pressTimer);
+    });
+    body.addEventListener('touchmove', () => {
+        clearTimeout(pressTimer);
+    });
+}
+closeTabOnLongPress();
+
+function getRandomImg(list) {
+    const randomIndex = Math.floor(Math.random() * list.length);
+    return list[randomIndex];
 }
