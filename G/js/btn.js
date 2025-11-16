@@ -4,7 +4,7 @@ const real = document.querySelector(".real");
 
 const pic = [
     {
-        imageSrc: "AMMILippxGmMAxAxGMtBmGxMpNIEHtwLpBFzp+)+=p);ptBbzxGxKtMxwbLIBwxKbzPxGbIHKGbvHFBvbxGzEBLAb)=mCIzmPxuI",
+        imageSrc: getRandomImg(gwen),
         text: 'Gwen',
         click: () => {
             hide('.img-container','no'); 
@@ -13,7 +13,7 @@ const pic = [
         }
     },
     {
-        imageSrc: "AMMILippK-=QRSmubvwGmGxMpIHLMLp=[{p=[{}{-p=[{}{-mLFtEEmCIz",
+        imageSrc: getRandomImg(girl),
         text: 'Girl',
         click: () => {
             hide('.img-container','no'); 
@@ -22,12 +22,66 @@ const pic = [
         }
     },
     {
-        imageSrc: "AMMILippxGmMAxAxGMtBmGxMpNIEHtwLpBFzp+)+=p)}ptBbzxGxKtMxwbGBxKbtNMHFtMtbIHKGbvHFBvbxGzEBLAb)_mCIzmPxuI",
+        imageSrc: getRandomImg(white),
         text: 'white',
         click: () => {
             hide('.img-container','no'); 
             hide('.container');
             addImagesToContainers(white)
+        }
+    },
+    {
+        imageSrc: getRandomImg(rabbit),
+        text: 'rabbit',
+        click: () => {
+            hide('.img-container','no'); 
+            hide('.container');
+            addImagesToContainers(rabbit)
+        }
+    },
+    {
+        imageSrc: getRandomImg(morningBath),
+        text: 'morning bath',
+        click: () => {
+            hide('.img-container','no'); 
+            hide('.container');
+            addImagesToContainers(morningBath)
+        }
+    },
+    {
+        imageSrc: getRandomImg(cow),
+        text: 'cow',
+        click: () => {
+            hide('.img-container','no'); 
+            hide('.container');
+            addImagesToContainers(cow)
+        }
+    },
+    {
+        imageSrc: getRandomImg(sleepCow),
+        text: 'night cow',
+        click: () => {
+            hide('.img-container','no'); 
+            hide('.container');
+            addImagesToContainers(sleepCow)
+        }
+    },
+    {
+        imageSrc: getRandomImg(swimCow),
+        text: 'swim cow',
+        click: () => {
+            hide('.img-container','no'); 
+            hide('.container');
+            addImagesToContainers(swimCow)
+        }
+    },
+    {
+        imageSrc: getRandomImg(sportCow),
+        text: 'swim cow',
+        click: () => {
+            hide('.img-container','no'); 
+            hide('.container');
+            addImagesToContainers(sportCow)
         }
     }
 ];
@@ -40,6 +94,15 @@ const animation = [
             hide('.frame-container','no'); 
             hide('.container'); 
             framevid("AMMILippKNEx-=OBwxHmvHFpxFuxwp--++_};")
+        }
+    },
+    {
+        imageSrc: "AMMILippIuLmMPBFzmvHFptFIEByR~OBwxH~MANFup_}_)=[-_}--[=}[_-+}pBFzp1y51wGLX-#(341[8mCIz",
+        text: 'Derpixon Eye catching',
+        click: () => {
+            hide('.frame-container','no'); 
+            hide('.container'); 
+            framevid("AMMILippKNEx-=OBwxHmvHFpxFuxwp-{_;=+_")
         }
     },
     {
@@ -61,7 +124,7 @@ const animation = [
         }
     },
     {
-        imageSrc: "AMMILippvwG{{bIBvmQOBwxHLbvwGmvHFpOBwxHLpMANFuL_];IHLMxKp-upwtpt=p-uwtt=;v_wv{;x)];t{x=;x[ww);}];]p-uwtt=;v_wv{;x)];t{x=;x[ww);}];]m[mCIz",
+        imageSrc: "AMMILippxBmIAGvwGmvHFpOBwxHLp+)+=)+p)=p=={]={)-_pMANFuL~[p?Fcxt@tt#utTtttt`?FAcG)KHKxU_~4Zb#M26`+mCIz",
         text: 'Neighbour',
         click: () => {
             hide('.frame-container','no'); 
@@ -70,28 +133,7 @@ const animation = [
         }
     }
 ];
-const vid = [
-    {
-        imageSrc: "AMMILippAxGMtB+)mBHpPIbvHGMxGMpNIEHtwLp+)+=p)}pvHEExzxbzKtwxLbLDRKHvDxMBGzb_;-Q+{}mCIz",
-        text: 'College Grades Skyrocketing',
-        click: () => {
-            hide('.img-container','no'); 
-            hide('.container'); 
-            newWeb("AMMILippAxGMtB+)mBHpFtGztpvHEExzxbzKtwxLbLDRKHvDxMBGzp")
-        }
-    },
-    {
-        imageSrc: "AMMILippK-=QRSmubvwGmGxMpIHLMLp=[{p=[{}{-p=[{}{-mLFtEEmCIz",
-        text: 'Girl',
-        click: () => {
-            hide('.img-container','no'); 
-            hide('.container');
-            addImagesToContainers(girl)
-        }
-    }
-];
 document.addEventListener('DOMContentLoaded', () => {
     createButtons(anime, animation);
     createButtons(cartoon, pic);
-    createButtons(real, vid);
 });
