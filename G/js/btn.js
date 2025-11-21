@@ -7,8 +7,6 @@ const pic = [
         imageSrc: getRandomImg(gwen),
         text: 'Gwen',
         click: () => {
-            hide('.img-container','no'); 
-            hide('.container'); 
             addImagesToContainers(gwen);
         }
     },
@@ -16,8 +14,6 @@ const pic = [
         imageSrc: getRandomImg(girl),
         text: 'Girl',
         click: () => {
-            hide('.img-container','no'); 
-            hide('.container');
             addImagesToContainers(girl)
         }
     },
@@ -25,8 +21,6 @@ const pic = [
         imageSrc: getRandomImg(white),
         text: 'white',
         click: () => {
-            hide('.img-container','no'); 
-            hide('.container');
             addImagesToContainers(white)
         }
     },
@@ -34,8 +28,6 @@ const pic = [
         imageSrc: getRandomImg(rabbit),
         text: 'rabbit',
         click: () => {
-            hide('.img-container','no'); 
-            hide('.container');
             addImagesToContainers(rabbit)
         }
     },
@@ -43,8 +35,6 @@ const pic = [
         imageSrc: getRandomImg(morningBath),
         text: 'morning bath',
         click: () => {
-            hide('.img-container','no'); 
-            hide('.container');
             addImagesToContainers(morningBath)
         }
     },
@@ -52,8 +42,6 @@ const pic = [
         imageSrc: getRandomImg(cow),
         text: 'cow',
         click: () => {
-            hide('.img-container','no'); 
-            hide('.container');
             addImagesToContainers(cow)
         }
     },
@@ -61,8 +49,6 @@ const pic = [
         imageSrc: getRandomImg(sleepCow),
         text: 'night cow',
         click: () => {
-            hide('.img-container','no'); 
-            hide('.container');
             addImagesToContainers(sleepCow)
         }
     },
@@ -70,8 +56,6 @@ const pic = [
         imageSrc: getRandomImg(swimCow),
         text: 'swim cow',
         click: () => {
-            hide('.img-container','no'); 
-            hide('.container');
             addImagesToContainers(swimCow)
         }
     },
@@ -79,8 +63,6 @@ const pic = [
         imageSrc: getRandomImg(sportCow),
         text: 'swim cow',
         click: () => {
-            hide('.img-container','no'); 
-            hide('.container');
             addImagesToContainers(sportCow)
         }
     }
