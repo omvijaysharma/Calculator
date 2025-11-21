@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enhanced Calculator</title>
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="calculator">
@@ -14,32 +14,32 @@
         </div>
         
         <div class="buttons">
-            <button class="clear" id="clear-all">AC</button>
-            <button class="clear" id="clear">C</button>
-            <button class="operator" id="percent">%</button>
-            <button class="operator" id="divide">÷</button>
+            <button class="clear" onclick="resetCalculator()">AC</button>
+            <button class="clear" onclick="clearCurrent()">C</button>
+            <button class="operator" onclick="chooseOperation('%')">%</button>
+            <button class="operator" onclick="chooseOperation('÷')">÷</button>
             
-            <button class="number" id="seven">7</button>
-            <button class="number" id="eight">8</button>
-            <button class="number" id="nine">9</button>
-            <button class="operator" id="multiply">×</button>
+            <button class="number" onclick="appendNumber('7')">7</button>
+            <button class="number" onclick="appendNumber('8')">8</button>
+            <button class="number" onclick="appendNumber('9')">9</button>
+            <button class="operator" onclick="chooseOperation('×')">×</button>
             
-            <button class="number" id="four">4</button>
-            <button class="number" id="five">5</button>
-            <button class="number" id="six">6</button>
-            <button class="operator" id="subtract">-</button>
+            <button class="number" onclick="appendNumber('4')">4</button>
+            <button class="number" onclick="appendNumber('5')">5</button>
+            <button class="number" onclick="appendNumber('6')">6</button>
+            <button class="operator" onclick="chooseOperation('-')">-</button>
             
-            <button class="number" id="one">1</button>
-            <button class="number" id="two">2</button>
-            <button class="number" id="three">3</button>
-            <button class="operator" id="add">+</button>
+            <button class="number" onclick="appendNumber('1')">1</button>
+            <button class="number" onclick="appendNumber('2')">2</button>
+            <button class="number" onclick="appendNumber('3')">3</button>
+            <button class="operator" onclick="chooseOperation('+')">+</button>
             
-            <button class="number zero" id="zero">0</button>
-            <button class="number" id="decimal">.</button>
-            <button class="equals" id="equals">=</button>
+            <button class="number zero" onclick="appendNumber('0')">0</button>
+            <button class="number" onclick="addDecimal()">.</button>
+            <button class="equals" onclick="compute()">=</button>
         </div>
         
-        <button class="history-btn" id="toggle-history">Show History</button>
+        <button class="history-btn" onclick="toggleHistory()">Show History</button>
         <div class="history-panel" id="history-panel"></div>
     </div>
 
