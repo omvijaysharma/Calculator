@@ -1,6 +1,4 @@
-document.querySelector('#tag').textContent = "Happy Birthday"
-document.querySelector('#pare').textContent = "Story lgaa denaa iskaa"
-
+//=======================================================================
 function applyCipher(text, num) { 
     const characterList = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{};:'\",.<>/?`~";
     const listLength = characterList.length;
@@ -36,6 +34,35 @@ function getkey() {
 
 const num = getkey()
 
+//=======================================================================
+function checkkeysave() {
+    const keybtn = document.querySelector('.key-save')
+    const keybtndiv = document.querySelector('.key-save div')
+    const key = localStorage.getItem("KeY")
+    
+    if (key) {
+        keybtn.style.alignItems = "flex-end"
+        keybtndiv.style.backgroundColor = "#ff2bc7"
+    }else {
+        // remove
+        keybtn.style.alignItems = "flex-start"
+        keybtndiv.style.backgroundColor = "#fff"
+    }
+}
+checkkeysave()
+
+function keysave() {
+    const key = localStorage.getItem("KeY")
+    
+    if (!key) {
+        localStorage.setItem("KeY", num)
+    }else {
+        // remove
+        localStorage.removeItem("KeY")
+    }
+    checkkeysave()
+}
+//=======================================================================
 function hide(ele, action = "") {
     let el = document.querySelector(ele);
     if (!el) return;
@@ -45,8 +72,25 @@ function hide(ele, action = "") {
         el.style.display = 'none';
     }
 }
+//=======================================================================
+let pdfList = [];
+function pdf() { 
+    const pdf = document.querySelector('.pdf')
+    pdf.style.display = "flex"
+    hide('.img-container'); 
+    hide('.container');
 
+    for (let i = 0; i < pdfList.length; i++) {
+        if (pdf) {
+            const img = document.createElement("img");
+            img.src = pdfList[i];
+            pdf.appendChild(img);
+        }
+    }
+}
+//=======================================================================
 function addImagesToContainers(imageList) {
+    pdfList = imageList
     function getContainerList() {
         if (window.innerWidth < window.innerHeight) {
             return [".img-container-1", ".img-container-2"];
@@ -55,6 +99,9 @@ function addImagesToContainers(imageList) {
         }
     }
 
+    hide('.img-container','no'); 
+    hide('.container');
+            
     const containers = getContainerList();
 
     for (let i = 0; i < imageList.length; i++) {
@@ -67,7 +114,7 @@ function addImagesToContainers(imageList) {
         }
     }
 }
-
+//=======================================================================
 function fullscreen() {
     if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen(); 
@@ -75,7 +122,7 @@ function fullscreen() {
     document.exitFullscreen();
     }
 }
-
+//=======================================================================
 function framevid(s) {
     document.querySelector("#frame").src = applyCipher(s, num)
 }
@@ -83,7 +130,7 @@ function framevid(s) {
 function newWeb(url,n = "") {
     window.location.href = applyCipher(url,num) + n
 }
-
+//=======================================================================
 function createButtons(container, list) {
     if (!container) {
         console.error("Container element not found!");
@@ -122,7 +169,7 @@ function createButtons(container, list) {
         container.appendChild(button);
     });
 }
-
+//=======================================================================
 function reloadOnShake() {
     if (!('DeviceMotionEvent' in window)) {
         console.log('Shaking not supported.');
@@ -152,7 +199,7 @@ function reloadOnShake() {
 }
 
 reloadOnShake();
-
+//=======================================================================
 function closeTabOnLongPress() {
     const body = document.body;
     let pressTimer;
@@ -161,7 +208,7 @@ function closeTabOnLongPress() {
         pressTimer = setTimeout(() => {
             console.log('Long press detected! Trying to close tab...'); 
             window.location.reload(); 
-        }, 500); 
+        }, 1500); 
     });
 
     body.addEventListener('touchend', () => {
@@ -172,7 +219,7 @@ function closeTabOnLongPress() {
     });
 }
 closeTabOnLongPress();
-
+//=======================================================================
 function getRandomImg(list) {
     const randomIndex = Math.floor(Math.random() * list.length);
     return list[randomIndex];
