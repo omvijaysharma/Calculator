@@ -7,7 +7,8 @@ window.addEventListener('beforeinstallprompt', (e) => {
   // 2. Event ko variable mein save karein
   deferredPrompt = e;
   // 3. Apna install button show karein
-  installBtn.style.display = 'block';
+// me isko block se nono kar deta hoo
+  installBtn.style.display = 'none';
 });
 
 installBtn.addEventListener('click', async () => {
